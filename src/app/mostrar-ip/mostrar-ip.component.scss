@@ -1,0 +1,72 @@
+@import '../../variables.scss';
+
+
+
+.ingevec-test-ip-display-inner {
+
+  font-size: 3em;
+  text-align: center;
+  min-height: 80px;
+  line-height: 80px;
+  color: #fff;
+  border-radius: 6px;
+  background-color: rgba(0,121,194,0.8);
+  display: inline-block;
+  padding: 20px;
+ 
+}
+
+.ingevec-ip-texto {
+  animation : desdeAbajo 1s ease-in-out;
+}
+
+h3.ingevec-titulo-ip-display {
+  font-family: Gotham;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: $azulOscuro;
+}
+
+
+
+.ingevec-ip-advertencia {
+  font-family: "Gotham";
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.4em;
+  display: block;
+  color: #213961;
+  margin-top: 0.8em;
+  font-weight: 600;
+  animation: cambiarOpacidad 1.5s ease-in;
+  max-width: 100%;
+}
+
+@keyframes cambiarOpacidad {
+  0% {
+    opacity: 0;
+  }
+
+  60%  {
+    opacity: 0;
+ 
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes desdeAbajo {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+

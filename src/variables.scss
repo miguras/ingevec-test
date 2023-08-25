@@ -1,0 +1,14 @@
+$azul: #1F355E;
+$azulOscuro: #18253d;
+$rojo: #E72352;
+$verde: #3DEDD0;
+$celeste: #1ca8fd;
+$gris: #F7F8FD;
+
+@mixin transition-all($value) {
+  -webkit-transition: all #{$value};
+  -ms-transition: all #{$value};
+  -moz-transition: all #{$value};
+  -o-transition: all #{$value};
+  transition: all #{$value};
+}

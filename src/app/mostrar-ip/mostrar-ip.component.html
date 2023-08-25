@@ -1,0 +1,16 @@
+<div class="col-sm-5">
+  <div class="ingevec-columna-interior ingevec-fondo-after">
+    <div *ngIf="sharedService.loadingAPI === 'block' || sharedService.ipActual" class="ingevec-test-ip-display">
+      <h3 class="ingevec-titulo-ip-display" *ngIf="sharedService.ipActual">Tu ip es:</h3>
+      <div *ngIf="!sharedService.ipActual"class="ingevec-test-ip-display-inner">
+        <ingevec-loader [style.display]="sharedService.loadingAPI"></ingevec-loader>
+      </div>
+      <div *ngIf="sharedService.ipActual" class="ingevec-test-ip-display-inner ingevec-ip-texto">
+        {{sharedService.ipActual}}
+      </div>
+      <div class="ingevec-ip-advertencia-wrapper" *ngIf="sharedService.cubierta">
+        <div *ngIf="sharedService.ipActual" class="ingevec-ip-advertencia">Por seguridad tu IP ha sido cubierta parcialmente. Puedes cambiar estos ajustes en opciones avanzadas</div>
+      </div>  
+    </div>
+  </div>
+</div>

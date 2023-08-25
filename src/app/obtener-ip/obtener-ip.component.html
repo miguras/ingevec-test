@@ -1,0 +1,18 @@
+<div>
+  <div class="ingevec-botones-principales-container">
+    <Button class="ingevec-boton-mostrar-ip ingevec-boton-general" (click)="preloadAPI()"><span class="ingevec-boton-general-texto">Averigua tu direccion IP</span><ingevec-loader class="ingevec-boton-loader ingevec-display-{{sharedService.loadingAPI}}"></ingevec-loader></Button>
+    <button class="ingevec-boton-esconder-ip ingevec-boton-general" [disabled]="mostrarBorrar" (click)="borrarIP()"><span class="ingevec-boton-general-texto">Borrar IP</span></button>
+  </div>
+
+  <div class="ingevec-otras-opciones-container">
+    <button type="button" (click)="mostrarAvanzadas()" class="ingevec-opciones-avanzadas-boton ingevec-boton-link btn btn-outline-secondary me-2">
+      {{avanzadasTexto}}
+    </button>
+    <div class="ingevec-opciones ingevec-mostrar-{{mostrarOpcionesAvanzadas}}">
+      <button (click)="preloadAPI(false)" class="ingevec-boton-avanzadas" [disabled]="desactivarBoton">Mostrar IP descubierta</button>
+    </div>
+  </div> 
+</div>
+     
+
+ 

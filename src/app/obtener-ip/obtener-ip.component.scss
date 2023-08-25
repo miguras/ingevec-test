@@ -1,0 +1,98 @@
+@import '../../variables.scss';
+
+.ingevec-botones-principales-container {
+  padding: 2em 0;
+}
+
+.ingevec-boton-loader {
+  transition: all .5s;
+  @include transition-all( 0.5s);
+  opacity: 0;
+  height: 100px;
+  width: 100px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  margin-left: -50px;
+}
+
+
+.ingevec-boton-loader.ingevec-display-block {
+  opacity: 0.2;
+}
+
+.ingevec-boton-general-texto {
+  float: left; 
+  display: block;
+}
+
+button.ingevec-boton-avanzadas {
+  @include transition-all( 0.5s);
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.9em;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 0.2em 0.6em;
+  margin: 1em 0;
+}
+
+button.ingevec-boton-avanzadas[disabled] {
+  opacity: 0.5
+}
+
+.ingevec-opciones {
+  @include transition-all( 0.5s);
+  height: 0;
+  overflow: hidden;
+}
+
+.ingevec-opciones.ingevec-mostrar-true {
+  height: 50px;
+
+}
+
+.ingevec-boton-mostrar-ip {
+  animation: botonUno 0.5s ease-in;
+}
+
+.ingevec-boton-esconder-ip {
+  animation: botonDos 0.7s ease-in;
+}
+
+.ingevec-otras-opciones-container {
+  margin-bottom: 3em;
+}
+
+
+
+@keyframes botonUno {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 1;
+ 
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes botonDos {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50%  {
+    opacity: 0;
+ 
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+}

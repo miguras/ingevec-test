@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/GothamMedium.ttf') format('truetype');
+  /* Otros formatos y propiedades de fuente si son necesarios */
+}
+
+
+
+body {
+  background-color: $gris;
+  color: #000;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Gotham";
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  font-size: 4em;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+button.ingevec-boton-general {
+  @include transition-all(0.5s);
+  padding: 2em;
+  font-size: 0.8em;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  background-color: $azulOscuro;
+  color: #fff;
+  margin: 2em 2em 0 0;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+button.ingevec-boton-general:hover {
+  background-color: $rojo;
+}
+
+button.ingevec-opciones-avanzadas-boton.ingevec-boton-link {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+
+
+button.ingevec-opciones-avanzadas-boton.ingevec-boton-link:active, button.ingevec-opciones-avanzadas-boton.ingevec-boton-link:hover {
+  background-color: transparent;
+  color: $celeste !important;
+}
+
+button.ingevec-boton-general[disabled], button.ingevec-boton-general:hover[disabled] {
+  background-color: $azulOscuro;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+button.ingevec-opciones-avanzadas-boton.ingevec-boton-link:hover {
+  color: #000;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .ingevec-test-ip-display-inner {
+    font-size: 1em !important;
+  }
+
+  .ingevec-boton-general {
+    clear: both;
+    float: none;
+    display: block;
+  }
+  
+  .ingevec-ip {
+    display: block !important;
+   
+  }
+
+}
+
+
+
